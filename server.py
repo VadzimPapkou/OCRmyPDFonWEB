@@ -45,7 +45,8 @@ def uploader_callback():
                         deskew=ocrmypdf_deskew,
                         tesseract_timeout=400 if ocrmypdf_ocr else 0, 
                         skip_text=True, 
-                        max_image_mpixels=901167396
+                        max_image_mpixels=901167396,
+                        language=['eng', 'rus']
                     )
 
                     st.session_state[STATE_FIXED_PDF_PATH] = fixed_path
